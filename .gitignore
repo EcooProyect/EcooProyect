@@ -1,0 +1,10 @@
+# Python
+*.pyc
+__pycache__/
+
+# Entornos virtuales
+env/
+venv/
+
+# Configuración
+config.py
