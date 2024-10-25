@@ -15,7 +15,8 @@ def run_main():
     temperature_sensor = TemperatureSensor()
     motion_sensor = MotionSensor()
 
-    # Inicializa los controladores
+    # Inicializa los controladores   
+    
     power_controller = PowerController()
     safety_controller = SafetyController()
 

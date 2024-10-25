@@ -8,3 +8,4 @@ venv/
 
 # Configuración
 config.py
+energy_saver.log
