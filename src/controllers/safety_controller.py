@@ -1,5 +1,5 @@
 import logging
-from src.sensors.temperature_sensor import TemperatureSensor
+from sensors.temperature_sensor import TemperatureSensor
 
 class SafetyController:
     def __init__(self, temperature_threshold=75.0):

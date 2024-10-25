@@ -1,5 +1,5 @@
 import unittest
-from src.controllers.safety_controller import SafetyController
+from controllers.safety_controller import SafetyController
 
 class TestSafetyController(unittest.TestCase):
     

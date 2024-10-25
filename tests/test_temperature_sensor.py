@@ -1,5 +1,5 @@
 import unittest
-from src.sensors.temperature_sensor import TemperatureSensor
+from sensors.temperature_sensor import TemperatureSensor
 
 class TestTemperatureSensor(unittest.TestCase):
     
