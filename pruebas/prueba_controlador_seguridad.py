@@ -1,15 +1,16 @@
 import unittest
-from controllers.safety_controller import SafetyController
+from fuentes.controladores.safety_controller import SafetyController
 
-class TestSafetyController(unittest.TestCase):
+class TestControladorSeguridad(unittest.TestCase):
     
     def setUp(self):
-        self.controller = SafetyController()
+        self.controlador = SafetyController()
     
-    def test_activate_safety_protocols(self):
+    def test_activar_protocolos_seguridad(self):
         # Simula la activación de protocolos de seguridad
-        self.controller.activate_safety_protocols()
-        self.assertTrue(self.controller.safety_activated)
+        self.controlador.activar_protocolos_seguridad()
+        self.assertTrue(self.controlador.protocolos_activados)
 
 if __name__ == '__main__':
     unittest.main()
+

@@ -1,17 +1,18 @@
 import unittest
-from src.controllers.power_controller import PowerController
+from fuentes.controladores.power_controller import PowerController  # Actualiza la ruta aquí
 
-class TestPowerController(unittest.TestCase):
+class TestControladorDeEnergia(unittest.TestCase):
     
     def setUp(self):
-        self.controller = PowerController()
+        self.controlador = PowerController()  # Inicializa el controlador de energía
     
-    def test_manage_power_usage(self):
+    def test_gestionar_uso_de_energia(self):
         # Simula una gestión de energía
-        self.controller.set_power_state(True)
-        self.assertTrue(self.controller.get_power_state())
-        self.controller.set_power_state(False)
-        self.assertFalse(self.controller.get_power_state())
+        self.controlador.set_power_state(True)  # Activa el estado de energía
+        self.assertTrue(self.controlador.get_power_state())  # Verifica que el estado sea verdadero
+        self.controlador.set_power_state(False)  # Desactiva el estado de energía
+        self.assertFalse(self.controlador.get_power_state())  # Verifica que el estado sea falso
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main()  # Ejecuta las pruebas
+

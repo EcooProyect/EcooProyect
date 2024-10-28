@@ -1,19 +1,18 @@
 import unittest
-from sensors.temperature_sensor import TemperatureSensor
+from pruebas.prueba_sensor_temperatura import SensorTemperatura
 
-class TestTemperatureSensor(unittest.TestCase):
+class TestSensorTemperatura(unittest.TestCase):
     
     def setUp(self):
-        self.sensor = TemperatureSensor()
+        self.sensor = SensorTemperatura()
         
-    def test_temperature_within_range(self):
-        self.sensor.set_temperature(25)
-        self.assertEqual(self.sensor.read_temperature(), 25)
+    def test_temperatura_en_rango(self):
+        self.sensor.establecer_temperatura(25)
+        self.assertEqual(self.sensor.leer_temperatura(), 25)
 
-    
-    def test_temperature_below_range(self):
-        self.sensor.set_temperature(15)
-        self.assertEqual(self.sensor.read_temperature(), 15)
+    def test_temperatura_bajo_rango(self):
+        self.sensor.establecer_temperatura(15)
+        self.assertEqual(self.sensor.leer_temperatura(), 15)
 
 if __name__ == '__main__':
     unittest.main()
