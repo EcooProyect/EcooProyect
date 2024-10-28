@@ -1,10 +1,10 @@
 import unittest
-from fuentes.controladores.safety_controller import SafetyController
+from fuentes.controladores.controladorSeguridad import controladorEnergia
 
 class TestControladorSeguridad(unittest.TestCase):
     
     def setUp(self):
-        self.controlador = SafetyController()
+        self.controlador = controladorEnergia()
     
     def test_activar_protocolos_seguridad(self):
         # Simula la activación de protocolos de seguridad
