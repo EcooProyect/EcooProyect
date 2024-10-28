@@ -1,14 +1,14 @@
 import logging
-from sensors.temperature_sensor import TemperatureSensor
+from fuentes.sensores.sensor_movimiento import SensorMovimiento  # Asegúrate de que el nombre de la clase y la ruta sean correctos
 
-class SafetyController:
+class ControladorSeguridad:
     def __init__(self, temperature_threshold=75.0):
         self.temperature_threshold = temperature_threshold
-        self.sensor = TemperatureSensor()
+        self.sensor = SensorMovimiento()  # Asegúrate de que esta clase está definida en el módulo correcto
 
     def check_temperature(self):
-        current_temp = self.sensor.read_temperature()
-        logging.info(f"Current temperature: {current_temp:.2f}°C")
+        current_temp = self.sensor.read_temperature()  # Asegúrate de que este método esté implementado en la clase SensorMovimiento
+        logging.info(f"Temperatura actual: {current_temp:.2f}°C")
 
         if current_temp > self.temperature_threshold:
             self.trigger_alarm()
@@ -16,17 +16,20 @@ class SafetyController:
         return True
 
     def trigger_alarm(self):
-        logging.warning("Temperature exceeds threshold! Triggering alarm.")
+        logging.warning("¡La temperatura excede el umbral! Activando alarma.")
         # Aquí puedes añadir código para realizar acciones de seguridad
-class SafetyController:
+
+class ControladorSeguridadProtocolos:
     def activate_safety_protocols(self):
         # Lógica para activar protocolos de seguridad
-        pass
-    
-    def activate_safety_protocols(self):
-        self.safety_activated = True 
+        self.safety_activated = True  # Asigna a un atributo si es necesario
+        logging.info("Protocolos de seguridad activados.")
+
 # Ejemplo de uso
 if __name__ == "__main__":
-    safety_controller = SafetyController()
+    logging.basicConfig(level=logging.INFO)  # Configura el logging para mostrar mensajes
+    safety_controller = ControladorSeguridad()
+    
     if not safety_controller.check_temperature():
-        print("Safety protocol activated!")
+        safety_controller.trigger_alarm()  # Llama a la alarma si la temperatura es alta
+        print("¡Protocolo de seguridad activado!")

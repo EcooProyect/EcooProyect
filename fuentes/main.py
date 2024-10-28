@@ -1,8 +1,8 @@
-from utils.logger import setup_logger
-from sensors.temperature_sensor import TemperatureSensor
-from sensors.motion_sensor import MotionSensor
-from controllers.power_controller import PowerController
-from controllers.safety_controller import SafetyController
+from utilidades.logger import setup_logger
+from sensores.sensor_temperatura import sensorTemperatura
+from sensores.sensor_movimiento import sensorMovimiento
+from controladores.controladorEnergia import controladorEnergia
+from controladores.controladorSeguridad import ControladorSeguridad
 
 # Configura el logger
 logger = setup_logger('EnergySaver', 'energy_saver.log')
@@ -12,13 +12,13 @@ def run_main():
     logger.info("Iniciando el proyecto Energy Saver...")
 
     # Inicializa los sensores
-    temperature_sensor = TemperatureSensor()
-    motion_sensor = MotionSensor()
+    temperature_sensor = sensorTemperatura()
+    motion_sensor = sensorMovimiento()
 
     # Inicializa los controladores   
     
-    power_controller = PowerController()
-    safety_controller = SafetyController()
+    power_controller = controladorEnergia()
+    safety_controller = ControladorSeguridad()
 
     # Lógica de funcionamiento (Ejemplo)
     while True:

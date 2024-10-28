@@ -1,10 +1,10 @@
 import unittest
-from fuentes.controladores.power_controller import PowerController  # Actualiza la ruta aquí
+from fuentes.controladores.controladorEnergia import controladorEnergia  # Actualiza la ruta aquí
 
 class TestControladorDeEnergia(unittest.TestCase):
     
     def setUp(self):
-        self.controlador = PowerController()  # Inicializa el controlador de energía
+        self.controlador = contorladorEnergia()  # Inicializa el controlador de energía
     
     def test_gestionar_uso_de_energia(self):
         # Simula una gestión de energía
