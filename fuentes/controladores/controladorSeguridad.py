@@ -1,10 +1,10 @@
 import logging
-from fuentes.sensores.sensor_movimiento import SensorMovimiento  # Asegúrate de que el nombre de la clase y la ruta sean correctos
+from fuentes.sensores.sensor_movimiento import sensorMovimiento  # Asegúrate de que el nombre de la clase y la ruta sean correctos
 
 class ControladorSeguridad:
     def __init__(self, temperature_threshold=75.0):
         self.temperature_threshold = temperature_threshold
-        self.sensor = SensorMovimiento()  # Asegúrate de que esta clase está definida en el módulo correcto
+        self.sensor = sensorMovimiento()  # Asegúrate de que esta clase está definida en el módulo correcto
 
     def check_temperature(self):
         current_temp = self.sensor.read_temperature()  # Asegúrate de que este método esté implementado en la clase SensorMovimiento

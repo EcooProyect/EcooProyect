@@ -4,7 +4,7 @@ from fuentes.controladores.controladorEnergia import controladorEnergia  # Actua
 class TestControladorDeEnergia(unittest.TestCase):
     
     def setUp(self):
-        self.controlador = contorladorEnergia()  # Inicializa el controlador de energía
+        self.controlador = controladorEnergia()  # Inicializa el controlador de energía
     
     def test_gestionar_uso_de_energia(self):
         # Simula una gestión de energía

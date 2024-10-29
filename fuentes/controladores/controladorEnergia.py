@@ -1,6 +1,6 @@
 import logging
 
-class PowerController:
+class controladorEnergia:
     def __init__(self):
         self.power_on = False
 

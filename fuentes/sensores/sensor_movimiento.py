@@ -1,7 +1,7 @@
 import random
 import logging
 
-class MotionSensor:
+class sensorMovimiento:
     def __init__(self):
         self.motion_detected = False
 
